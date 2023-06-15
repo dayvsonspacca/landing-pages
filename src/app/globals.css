@@ -6,3 +6,11 @@
 .bg-gradient-home {
   background: linear-gradient(to right,rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0));
 }
+
+.gradient-text-home {
+  background: linear-gradient(to right, rgba(154, 255, 255, 0.8) 60%, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
