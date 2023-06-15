@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Header from '@/components/home/Header';
+import Footer from '@/components/home/Footer';
 
 import { ImSvg } from 'react-icons/im';
 
@@ -8,7 +9,7 @@ export default function Home() {
   const projetos = [{ nome: '' }];
 
   return (
-    <div className="bg-home-primary overflow-hidden pb-[100rem]">
+    <div className="bg-home-primary overflow-hidden ">
       <Header />
 
       <div className="absolute w-full h-72 overflow-hidden flex justify-between">
@@ -20,7 +21,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="#inicio" className="flex justify-center items-center flex-col text-home-text pt-24">
+      <div className="flex justify-center items-center flex-col text-home-text pt-32">
         <div className="text-center flex flex-col items-center">
           <h1 className="text-3xl mb-5">
             Coletânea de Lading
@@ -31,13 +32,15 @@ export default function Home() {
             <br />
             pages criadas por mim com o propósito de aprendizado.
           </p>
+
           <Image className="my-10" alt="" src="/svgs/imuai.svg" width={600} height={400} />
+          
         </div>
       </div>
 
-      <div className="grid grid-cols-12 mt-20 overflow-hidden">
+      <div className="grid grid-cols-12 my-28">
         <div className="absolute">
-          <div className="relative w-96 h-52 rotate-[40deg] bg-gradient-home right-32 bottom-32"></div>
+          <div className="relative w-96 h-72 rotate-[40deg] bg-gradient-home right-36 bottom-32"></div>
         </div>
 
         <div className="col-span-6 flex justify-center items-center flex-col m-5">
@@ -72,7 +75,14 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="grid grid-cols-12 mt-28">
+      <div className="absolute">
+        <div
+          className="relative w-52 h-52 blur-lg opacity-10 rounded-full bg-gradient-to-r 
+                       from-home-secondary to-home-text top-64 left-32"
+        ></div>
+      </div>
+
+      <div className="grid grid-cols-12 my-28">
         <div className="col-span-6 flex justify-center items-center m-5">
           <Image className="-mr-20 p-0" alt="" src="/svgs/imuai.svg" width={400} height={400} />
         </div>
@@ -100,6 +110,8 @@ export default function Home() {
           </Link>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 }
